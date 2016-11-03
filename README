@@ -1,0 +1,11 @@
+Running:
+gdb secure_app
+ (gdb) run
+will quit the debugger
+
+Running 
+gdb secure_app
+(gdb) set exec-wrapper env 'LD_PRELOAD=libunsecure_it.so'
+(gdb) run
+You're insecure
+
