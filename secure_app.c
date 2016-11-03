@@ -8,6 +8,10 @@ int main(void) {
   		printf("traced!\n");
 		return -1;
 	}
+	if(getenv("LD_PRELOAD") != NULL) {
+  		printf("LD_PRELOAD not permitted!\n");
+		return -1;
+	}
 	char * secret = calloc(1, 1024);
 	sprintf(secret, "This is my secret number %d\n", 42);
 
